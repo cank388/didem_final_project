@@ -29,6 +29,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('Login'),
       ),
       body: Center(
@@ -48,6 +49,7 @@ class _LoginState extends State<Login> {
               padding: EdgeInsets.only(top: 20, left: 20, right: 20),
               child: TextField(
                 controller: _passwordController,
+                obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Enter your password',

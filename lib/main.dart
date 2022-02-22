@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/Splash/splash.dart';
 
 import 'Login/login.dart';
 
@@ -10,7 +11,8 @@ void main() {
     initialRoute: '/',
     routes: {
       // When navigating to the "/" route, build the FirstScreen widget.
-      '/': (context) => const Login(),
+      '/': (context) => SplashScreen(),
+      '/login': (context) => const Login(),
       // When navigating to the "/second" route, build the SecondScreen widget.
       //'/second': (context) => const SecondScreen(),
     },
