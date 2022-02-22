@@ -8,8 +8,30 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  bool toggleState=true;
+
   @override
   Widget build(BuildContext context) {
-    return Container(color: const Color(0xFFFFE306));
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Login'),
+      ),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Padding(
+                padding: EdgeInsets.only(top: 70.0),
+                child: ElevatedButton(
+                    onPressed: null,
+                    child: (toggleState
+                        ?( Text('Blink'))
+                        :(Text('Stop Blinking'))
+                    )
+                )
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
