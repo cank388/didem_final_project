@@ -16,7 +16,8 @@ class _SplashScreenState extends State<SplashScreen> {
   navigateUser() async {
     Future.delayed(const Duration(seconds: 2), () {
       // EasyLoading.dismiss();
-      Navigator.pushNamed(context, '/login');
+      Navigator.pushNamedAndRemoveUntil(context, "/login", (_) => false);
+      //Navigator.pushNamed(context, '/second');
     });
   }
 
